@@ -430,6 +430,10 @@ h2 {
         display: inline;
     }
 
+    .navbar_customs {
+        padding-left: 0%;
+    }
+
 }
 
 
