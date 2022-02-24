@@ -54,9 +54,70 @@
     height: 100%;
 }
 
-.navbar__links:hover {
+/* .navbar__links:hover {
     color: #ffffff;
     transition: all 0.3s ease;
+} */
+
+.navbar__links:hover {
+
+    color: #fdfdfd;
+    -webkit-transition: color 200ms linear;
+    -ms-transition: color 200ms linear;
+    transition: color 200ms linear;
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 5px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    animation: rainbow .5s linear 0s infinite;
+    animation-direction: alternate;
+    color: rgb(218, 210, 210);
+
+}
+
+.button:hover {
+    animation: rainbow .5s linear 0s infinite;
+    animation-direction: alternate;
+    -webkit-transition: color 200ms linear;
+    -ms-transition: color 200ms linear;
+    transition: color 200ms linear;
+    cursor: pointer;
+}
+
+.navbar_customs {
+    display:flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    position: fixed;
+    padding-left: 50%;
+    height:80px;
+}
+
+#dvd {
+    opacity: 0%;
+}
+#dvd.is-active {
+    opacity: 100%;
+}
+
+#dvdbutton.is-active {
+    animation: rainbow .5s linear 0s infinite;
+    animation-direction: alternate;
+}
+
+#dvdbutton.is-active:hover {
+    background: #141414;
+    color: #cac8c8;
 }
 
 @media screen and (max-width: 960px) {
@@ -65,7 +126,7 @@
         justify-content: space-between;
         height: 80px;
         z-index: 1;
-        max-width: 1300px;
+        max-width: 100vw;
         padding: 0;
     }
     .navbar__menu {
@@ -74,12 +135,17 @@
         margin: 0;
         width: 100%;
         position: absolute;
+        padding-left: 0vw;
         top: -1000px;
         opacity: 0;
         transition: all 0.5s ease;
-        height: 50vh;
+        height: 100%;
         z-index: -1;
         background: #292826;
+    }
+
+    .navbar_customs {
+        opacity: 0%;
     }
     .navbar__menu.active {
         background: #292826;
@@ -152,6 +218,8 @@
         transform: translateY(-8px) rotate(-45deg);
         
     }
+
+
 }
 
 
@@ -198,9 +266,11 @@
 }
 
 body {
-    background-color: #1e1d24;
-    max-width:1600px;
+    /* background-color: #1e1d24; */
+    max-width:100vw;
     padding: 1rem 0rem;
+    animation: backgroundshift 5s infinite;
+    animation-direction: alternate;
 }
 
 .header-link {
@@ -250,15 +320,22 @@ h2 {
 .tv img {
     filter: Invert();
     max-width: 7vh;
+    animation: dvdlogochanger .5s linear 0s infinite;
+    transition: ease;
+    animation-direction: alternate;
   }
   
+  /* hero section */
+
   .actualcontent {
-      padding: 12vh 9em;
+      margin-top: 80px;
+      padding-left:20%;
+      padding-top: 4vh;
       align-items: center;
       justify-content: center
   }
 
-  .actualcontent h1 {
+  /* .actualcontent h1 {
       color: #dad6d2;
       font-size: 6rem;
       font-family: 'Roboto Mono', monospace;
@@ -269,7 +346,7 @@ h2 {
     color: #dad6d2;
     font-size: 2rem;
     font-family: 'Roboto Mono', monospace;
-}
+} */
 
 .imagebox {
     flex-basis: 70%;
@@ -281,3 +358,117 @@ h2 {
     max-width: 40%;
 }
 
+.wrapper {
+    padding-top: 3vh;
+    height: 5rem;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo h1 {
+    width: 8.3ch;
+    animation: typing 0.8s steps(8), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 15px solid;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 5rem;
+    color: rgb(232, 234, 235);
+  }
+
+  .typing-demo {
+      font-size:3rem;
+  }
+  .typing-demo h2 {
+    transition: all 4s ease;
+    font-size: 3rem;
+    color: #fff;
+    animation: welcomeappear 10s 1;
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  @keyframes welcomeappear {
+    0% {
+        color: transparent;
+      }
+    100% {
+        color: #fff;
+    }
+}
+@media screen and (max-width: 960px) {
+    .actualcontent h1 {
+        font-size: 4rem;
+    }
+
+    .actualcontent h2 {
+        font-size: 2rem;
+    }
+
+    .typing-demo{
+        padding-left: 15%;
+    }
+
+}
+
+
+
+@keyframes backgroundshift {
+    from {background-color: rgb(51, 47, 77);}
+    to {background-color: rgb(61, 77, 92);}
+}
+
+@keyframes dvdlogochanger {
+    from {filter: invert(48%) sepia(65%) saturate(3207%) hue-rotate(50deg) brightness(95%) contrast(120%);}
+    to {filter: invert(10%) sepia(0%) saturate(100%) hue-rotate(300deg) brightness(1000%) contrast(0%);}
+}
+
+@keyframes rainbow {
+    from {
+      background-color: #6666ff;
+    }
+    10% {
+        background-color: #0099ff;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    75% {
+        background-color: #ff3399;
+    }
+    100% {
+        background-color: #6666ff;
+    }
+  }
+
+  @keyframes rainbowcolor {
+    from {
+      color: #6666ff;
+    }
+    10% {
+        color: #0099ff;
+    }
+    50% {
+        color: #00ff00;
+    }
+    75% {
+        color: #ff3399;
+    }
+    100% {
+        color: #6666ff;
+    }
+  }

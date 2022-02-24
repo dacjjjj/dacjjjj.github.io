@@ -21,11 +21,11 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-                    <marquee scrollamount="10" class="tv" direction="down" width="250" height="200" behavior="alternate" style="border:transparent">
-                        <marquee behavior="alternate" scrollamount="25">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/DVD_VIDEO_logo.png">
-                        </marquee>
+                <marquee scrollamount="10" class="tv" direction="down" width="250" height="200" behavior="alternate" style="border:transparent" >
+                     <marquee behavior="alternate" scrollamount="25">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/DVD_VIDEO_logo.png" id="dvd">
                       </marquee>
+                </marquee>
                 <ul class="navbar__menu">
                     <li class="navbar__item">
                         <a href="https://www.youtube.com/watch?v=Oml-CrE1N64" class="navbar__links"> Home </a>
@@ -36,7 +36,13 @@
                     <li class="navbar__item">
                         <a href="https://www.youtube.com/watch?v=vjW8wmF5VWc" class="navbar__links"> Projects </a>
                     </li>
+                    
                 </ul>
+                <div class="navbar_customs">
+                    <div class="navbar__btn"> <a
+                        id="dvdbutton" class="button"> dvd </a>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="maincontent">
@@ -62,11 +68,11 @@
                             <i class="fa-brands fa-pinterest fa-2x"></i>
                         </a>
                     </li>
-                    <li class="sidebar-item">
+                    <!-- <li class="sidebar-item">
                         <a href="https://soundcloud.com/kamilsorta" target="_blank" class="sidebar--links">
                             <i class="fa-brands fa-soundcloud fa-2x"> </i>
                         </a>
-                    </li>
+                    </li> -->
                 </div>
                 <div class="underline"></div>
                 <div class="header-link">
@@ -74,11 +80,17 @@
                 </div>
             </div>
             <div class="actualcontent">
-                <h1 class="Welcome">Welcome</h1>
-                <h2>to my website...</h2>
-                <div class="imagebox">
-                    <img src="images/boba.jpg" alt="hulk">
+                <div class="wrapper">
+                    <div class="typing-demo">
+                        <h1>Welcome! </h1>
+                        <h2>to my website</h2>
+                        <!-- <h1 class="Welcome">Welcome</h1>
+                        <h2>to my website...</h2> -->
+                    </div>
                 </div>
+                <!-- <div class="imagebox">
+                    <img src="images/boba.jpg" alt="hulk">
+                </div> -->
             </div>
         </div>
         <script src="app.js"></script>
