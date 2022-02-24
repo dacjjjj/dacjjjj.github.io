@@ -72,12 +72,12 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 8px 5px;
+    padding: 8px 12px;
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 5px;
     animation: rainbow .5s linear 0s infinite;
     animation-direction: alternate;
     color: rgb(218, 210, 210);
@@ -99,7 +99,7 @@
     list-style: none;
     text-align: center;
     position: fixed;
-    padding-left: 50%;
+    padding-left: 90%;
     height:80px;
 }
 
@@ -330,7 +330,7 @@ h2 {
   .actualcontent {
       margin-top: 80px;
       padding-left:130px;
-      padding-top: 4vh;
+      padding-top: 0vh;
       align-items: center;
       justify-content: center
   }
@@ -359,8 +359,8 @@ h2 {
 }
 
 .wrapper {
-    padding-top: 3vh;
-    height: 5rem;
+    /* padding-top: 100px;
+    height: 100vh; */
     /*This part is important for centering*/
     display: flex;
     align-items: center;
@@ -385,6 +385,7 @@ h2 {
   .typing-demo h2 {
     transition: all 4s ease;
     font-size: 3rem;
+    font-family: 'Roboto Mono', monospace;
     color: #fff;
     animation: welcomeappear 10s 1;
   }
@@ -423,13 +424,19 @@ h2 {
         padding-left: 120px;
     }
 
+    .wrapper {
+        padding-top: 80px;
+        height: 100vh;
+        display: inline;
+    }
+
 }
 
 
 
 @keyframes backgroundshift {
-    from {background-color: rgb(51, 47, 77);}
-    to {background-color: rgb(61, 77, 92);}
+    from {background-color: #211f2b;}
+    to {background-color: rgb(18, 32, 44);}
 }
 
 @keyframes dvdlogochanger {
