@@ -106,29 +106,6 @@
     cursor: pointer;
 }
 
-.navbar_customs {
-    display:flex;
-    align-items: left;
-    height:80px;
-}
-
-#dvd {
-    opacity: 0%;
-}
-#dvd.is-active {
-    opacity: 100%;
-}
-
-#dvdbutton.is-active {
-    animation: rainbow .5s linear 0s infinite;
-    animation-direction: alternate;
-}
-
-#dvdbutton.is-active:hover {
-    background: #141414;
-    color: #cac8c8;
-}
-
 @media screen and (max-width: 960px) {
     .navbar__container {
         display: flex;
@@ -232,49 +209,6 @@
 
 }
 
-
-.sidebar {
-    margin-top:75px;
-    display: flex;
-    flex-direction: row;
-    height: 80vh;
-    max-width: 7em;
-    position: fixed;
-    padding: 0 1rem;
-}
-
-.sidebar-socials li{
-    color: transparent;
-}
-.sidebar--links {
-    color:#dad6d2
-}
-.sidebar--links:hover {
-    color: #62d9f7;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.fa-soundcloud {
-    transform: translate(-2px)
-}
-.sidebar-socials {
-    min-width: 40px;
-    color: #202020;
-}
-
-.underline {
-    border-right: 1px solid #f7bb62;
-    transform: translate(7px)
-}
-
-.maincontent {
-    display: flex;
-    flex-direction:row;
-    width:100%;
-    height:100vh;
-}
-
 body {
     /* background-color: #1e1d24; */
     max-width:100vw;
@@ -299,110 +233,43 @@ body {
     margin-left:0.4em;
 }
 
-h2 {
-    font-size: 3rem;
-}
 
-.dvdbouncer {
-    transform: translate(7em);
-    height: 100vh;
-    width: 100vw;
-    margin-top:5em;
-    z-index:-999;
-}
-
-.tv {
-    position:relative;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    border-radius: 0vh;
-    border-color: transparent;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent 0.25vh,
-      rgba(255, 255, 255, 0.2) 0.25vh,
-      rgba(255, 255, 255, 0.2) 0.5vh
-    );
-    z-index: -999;
-  }
-
-.tv img {
-    filter: Invert();
-    max-width: 7vh;
-    animation: dvdlogochanger .5s linear 0s infinite;
-    transition: ease;
-    animation-direction: alternate;
-  }
   
   /* hero section */
 
   .maincontent {
       margin-top: 80px;
-      padding-left:130px;
       padding-top: 0vh;
+      padding-left: 20%;
+      padding-right: 20%;
   }
 
   .maincontent img {
-      max-width: 50%;
-      max-height: 50%;
-  }
-  /* .actualcontent h1 {
-      color: #dad6d2;
-      font-size: 6rem;
-      font-family: 'Roboto Mono', monospace;
-      width: 500px;
-  }
-
-  .actualcontent h2 {
-    color: #dad6d2;
-    font-size: 2rem;
-    font-family: 'Roboto Mono', monospace;
-} */
-
-.imagebox {
-    flex-basis: 70%;
-    order: 2;
-}
-
-.imagebox img {
-    min-width: 5em;
-    max-width: 40%;
-}
-
-.wrapper {
-    /* padding-top: 100px;
-    height: 100vh; */
-    /*This part is important for centering*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .typing-demo h1 {
-    width: 8.3ch;
-    animation: typing 0.8s steps(8), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 15px solid;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
-    font-size: 5rem;
-    color: rgb(232, 234, 235);
+      height: 60vh;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: contain;
+      width: 50%;
   }
 
-  .typing-demo {
-      font-size:3rem;
-  }
-  .typing-demo h2 {
-    transition: all 4s ease;
+  header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
     font-size: 3rem;
-    font-family: 'Roboto Mono', monospace;
-    color: #fff;
-    animation: welcomeappear 10s 1;
   }
-  
+  .desc {
+      text-align: center;
+  }
+
+  .desc a{
+    color:black;
+
+}
   
   @keyframes typing {
     from {
@@ -452,8 +319,8 @@ h2 {
 
 
 @keyframes backgroundshift {
-    from {background-color: #9e9da3;}
-    to {background-color: rgb(116, 123, 129);}
+    from {background-color: #c5bba9;}
+    to {background-color: rgb(196, 190, 163);}
 }
 
 @keyframes dvdlogochanger {
