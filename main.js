@@ -27,8 +27,12 @@ body.addEventListener('click', function() {
         }, "json")
     } else if (clickcount < 5) {
         const audio = new Audio("images/esketit.mp3");
-    audio.play();
-    clickcount = clickcount + 1
+        audio.play();
+        clickcount = clickcount + 1
+        if (clickcound =5 ){
+            const alertaudio = new Audio("images/ALARM2.mp3");
+            alertaudio.play();
+        }
     }
 })
 
