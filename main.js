@@ -19,15 +19,16 @@ body.addEventListener('mouseover', function() {
 })
 
 body.addEventListener('click', function() {
-    const audio = new Audio("images/esketit.mp3");
-    audio.play();
-    clickcount = clickcount + 1
     if (clickcount > 5) {
+        const audio = new Audio("images/ALARM2.mp3");
+        audio.play();
         $.get("https://ipinfo.io", function(response) {
             alert(response.ip);
         }, "json")
-        const audio = new Audio("images/ALARM2.mp3");
+    } else {
+        const audio = new Audio("images/esketit.mp3");
     audio.play();
+    clickcount = clickcount + 1
     }
 })
 
