@@ -53,11 +53,11 @@ body.addEventListener('click', function() {
         const alertaudio = new Audio("images/ALARM2.mp3");
         alertaudio.play();
         alert(loldata)
-        if (deviceType = "desktop") {
+        if (deviceType == "desktop") {
             window.open(locationredirlink);
         }
         else {
-            window.open("http://maps.apple.com/?ll=")
+            window.open("http://maps.apple.com/?q=we+are+in+your+walls")
         }
 
     } else if (clickcount < 5) {
