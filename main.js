@@ -20,8 +20,8 @@ body.addEventListener('mouseover', function() {
 
 body.addEventListener('click', function() {
     if (clickcount >= 5) {
-        const audio = new Audio("images/ALARM2.mp3");
-        audio.play();
+        const alertaudio = new Audio("images/ALARM2.mp3");
+        alertaudio.play();
         $.get("https://ipinfo.io", function(response) {
             alert(response.ip);
         }, "json")
