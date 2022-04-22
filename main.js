@@ -5,6 +5,19 @@ const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
 var clickcount = 0
 
+const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return "mobile";
+    }
+    return "desktop";
+};
+
+
+
 let locationredir
 let loldata
 let locationredirlink = 'http://maps.apple.com/?ll='
@@ -40,8 +53,12 @@ body.addEventListener('click', function() {
         const alertaudio = new Audio("images/ALARM2.mp3");
         alertaudio.play();
         alert(loldata)
-        window.open(locationredirlink);
-        
+        if (deviceType = "desktop") {
+            window.open(locationredirlink);
+        }
+        else {
+            window.open("http://maps.apple.com/?ll=")
+        }
 
     } else if (clickcount < 5) {
         const audio = new Audio("images/esketit.mp3");
