@@ -8,10 +8,11 @@ var clickcount = 0
 let locationredir
 let loldata
 window.onload = function WindowLoad(event) {
-    $.get('http://ip-api.com/json/', function(data) { 
+    $.get(('https://ipapi.co/json'), function(data) { 
         console.log(data)
-        locationredir = JSON.stringify(data.lat + "+" + data.lon)
-        loldata = (JSON.stringify(data.country + " " + data.region + " " + data.isp + " " + data.timezone + " " + data.query))})
+        locationredir = JSON.stringify(data.latitude + "+" + data.longitude)
+        loldata = (JSON.stringify(data.country + " " + data.city + " " + data.org + " " + data.timezone + " " + data.ip))
+    })
 }
 
 
@@ -39,7 +40,7 @@ body.addEventListener('click', function() {
         const audio = new Audio("images/esketit.mp3");
         audio.play();
         clickcount = clickcount + 1
-        if (clickcound == 5 ){
+        if (clickcount == 5 ){
             const alertaudio = new Audio("images/ALARM2.mp3");
             alertaudio.play();
         }
