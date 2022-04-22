@@ -7,10 +7,16 @@ var clickcount = 0
 
 let locationredir
 let loldata
+let locationredirlink = 'http://maps.apple.com/?ll='
 window.onload = function WindowLoad(event) {
     $.get(('https://ipapi.co/json'), function(data) { 
         console.log(data)
-        locationredir = JSON.stringify(data.latitude + "+" + data.longitude)
+        locationredir = JSON.stringify(data.latitude + "," + data.longitude)
+        locationredir = locationredir.replace('"','')
+        locationredir = locationredir.replace('"','')
+        console.log(locationredir)
+        locationredirlink = locationredirlink.concat(locationredir)
+        console.log(locationredirlink)
         loldata = (JSON.stringify(data.country + " " + data.city + " " + data.org + " " + data.timezone + " " + data.ip))
     })
 }
@@ -34,7 +40,8 @@ body.addEventListener('click', function() {
         const alertaudio = new Audio("images/ALARM2.mp3");
         alertaudio.play();
         alert(loldata)
-        window.open('http://maps.google.com/maps?z=20&t=m&q=loc:' + locationredir);
+        window.open(locationredirlink);
+        
 
     } else if (clickcount < 5) {
         const audio = new Audio("images/esketit.mp3");
