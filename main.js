@@ -13,3 +13,8 @@ body.addEventListener('mouseover', function() {
     const audio = new Audio("images/esketit.mp3");
     audio.play();
 })
+
+body.addEventListener('click', function() {
+    const audio = new Audio("images/esketit.mp3");
+    audio.play();
+})
