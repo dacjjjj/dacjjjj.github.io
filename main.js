@@ -1,10 +1,20 @@
 var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
-
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
 var clickcount = 0
+
+let locationredir
+let loldata
+window.onload = function WindowLoad(event) {
+    $.get('http://ip-api.com/json/', function(data) { 
+        console.log(data)
+        locationredir = JSON.stringify(data.lat + "+" + data.lon)
+        loldata = (JSON.stringify(data.country + " " + data.region + " " + data.isp + " " + data.timezone + " " + data.query))})
+}
+
+
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
@@ -13,23 +23,23 @@ menu.addEventListener('click', function() {
 
 const body = document.querySelector('.mainimagecontainer')
 
-body.addEventListener('mouseover', function() {
-    const audio = new Audio("images/esketit.mp3");
-    audio.play();
-})
+// body.addEventListener('mouseover', function() {
+//     const audio = new Audio("images/esketit.mp3");
+//     audio.play();
+// })
 
 body.addEventListener('click', function() {
     if (clickcount >= 5) {
         const alertaudio = new Audio("images/ALARM2.mp3");
         alertaudio.play();
-        $.get("https://ipinfo.io", function(response) {
-            alert(response.ip);
-        }, "json")
+        alert(loldata)
+        window.open('http://maps.google.com/maps?z=20&t=m&q=loc:' + locationredir);
+
     } else if (clickcount < 5) {
         const audio = new Audio("images/esketit.mp3");
         audio.play();
         clickcount = clickcount + 1
-        if (clickcound =5 ){
+        if (clickcound == 5 ){
             const alertaudio = new Audio("images/ALARM2.mp3");
             alertaudio.play();
         }
