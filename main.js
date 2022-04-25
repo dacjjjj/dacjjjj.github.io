@@ -17,24 +17,6 @@ const deviceType = () => {
 };
 
 
-
-let locationredir
-let loldata
-let locationredirlink = 'http://maps.apple.com/?ll='
-window.onload = function WindowLoad(event) {
-    $.get(('https://ipapi.co/json'), function(data) { 
-        console.log(data)
-        locationredir = JSON.stringify(data.latitude + "," + data.longitude)
-        locationredir = locationredir.replace('"','')
-        locationredir = locationredir.replace('"','')
-        console.log(locationredir)
-        locationredirlink = locationredirlink.concat(locationredir)
-        console.log(locationredirlink)
-        loldata = (JSON.stringify(data.country + " " + data.city + " " + data.org + " " + data.timezone + " " + data.ip))
-    })
-}
-
-
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
@@ -57,7 +39,7 @@ body.addEventListener('click', function() {
             window.open(locationredirlink);
         }
         else {
-            window.open("http://maps.apple.com/?q=we+are+in+your+walls")
+            window.open("http://maps.apple.com/?q=lol")
         }
 
     } else if (clickcount < 5) {
