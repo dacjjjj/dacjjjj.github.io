@@ -14,6 +14,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"
     </head>
     <body>
-        <h1>under reconstruction :p <h1>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="date__time">
+                    <p><span id="datetime"></span></p>
+                    <script>
+                        var dt = new Date();
+                        document.getElementById("datetime").innerHTML = dt;
+                        </script>
+                        
+                </div>
+                <a href="/" class="navbar__logo" id="logo"> acjjjj </a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links"> Home </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://dacjjjj.github.io/threegame" class="navbar__links"> Projects </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links"> links </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links"> v5.2 </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div class="maincontent">
+            <!-- <div class="welcome"><h1>Hey, Welcome to my website</h1></div> -->
+            <!-- <div class="mainimagecontainer"><img src="images/construct.png" alt="building"></div> -->
+            <div class="tempimagecontainer"><img src="images/construct.png" alt="building">
+                <div class="temp"><h2>This section is currently under development right now but the links at the top work!</h2></div></div>
+            <header>About me</header>
+            <div class="desc">
+                <p>My name is Dominic and i'm a college student who likes software engineering and design</p>
+                <p>follow me here to see projects i've worked on/working on</p>
+                <a href="mailto:domajac2@gmail.com" class="email">domajac2@gmail.com</a>
+                </div>
+                <div class="easteregg">
+                    <p>Well, that was a waste of padding.</p>
+                    </div>
+        </div>
+        
+        <script src="main.js"></script>
     </body>
 </html>

@@ -1,14 +1,19 @@
+@font-face {
+    font-family:'ddacjj' ;
+    src: url(fonts/DdacjjExtendedV3-Regular.ttf);
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Noto Serif Display', serif;
+    font-family: 'ddacjj', serif;
 }
 
 html {
     overflow: hidden;
     height: 100%;
 }
+
 
 .navbar {
     /* background-image: url(images/filmClouds.JPG);
@@ -33,12 +38,13 @@ html {
 }
 
 .date__time {
-    font-size: 0.5rem;
+    font-size: 1rem;
     direction: rtl;
     text-align: right;
     position:absolute;
     top:0;
     right:0;
+    color: #c7c7c7;
 }
 .fa-gem {
     margin-right: 0.5rem;
@@ -56,13 +62,14 @@ html {
 }
 
 .navbar__logo {
-    color: #1c1d1f;
+    color: #e7e7e7;
     font-size: 2.5rem;
     padding-right: 100px;
     padding-left:4vw;
     display:flex;
     align-items: center;
     text-align: center;
+    text-decoration: none;
 }
 
 .date__time {
@@ -73,7 +80,7 @@ html {
 }
 
 .navbar__links{
-    color: #1c1d1f;
+    color: #c7c7c7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,13 +242,13 @@ html {
 }
 
 .easteregg {
-    padding-top: 75vh;
+    padding-top: 100%;
 }
 
 body {
-    /* background-color: #1e1d24; */
-    background-image: url(images/filmClouds.JPG);
-    background-size: cover;
+    background-color: #202020;
+    /* background-image: url(images/filmClouds.JPG);
+    background-size: cover; */
     max-width:100vw;
     padding: 1rem 0rem;
     overflow: auto;
@@ -265,19 +272,41 @@ body {
     margin-left:0.4em;
 }
 
+.tempimagecontainer {
+    display:inline-block;
+      vertical-align:top;
+}
 
+.temp {
+    padding-top: 20%;
+    font-size: 1.5rem;;
+
+}
   
   /* hero section */
+.tempimagecontainer img {
+    float:right;
+    padding-top:10%;
+      max-width: 100%;
+      max-height: 100%;
+      display:inline-block;
+      vertical-align:top;
+      margin-left: 0;
+      margin-right: auto;
+      object-fit: contain;
+      width: 50%;
 
+}
   .maincontent {
       height:100vh;
       margin-top: 80px;
       padding-top: 0vh;
       padding-left: 20%;
       padding-right: 20%;
+      color: #c7c7c7;
   }
 
-  .maincontent img {
+  /* .maincontent img {
       padding-top:10%;
       max-width: 100%;
       max-height: 100%;
@@ -286,7 +315,7 @@ body {
       margin-right: auto;
       object-fit: contain;
       width: 50%;
-  }
+  } */
 
   header {
     margin-left: auto;
@@ -300,7 +329,7 @@ body {
   }
 
   .desc a{
-    color:black;
+    color: #8bbedb;
 
 }
 
@@ -309,27 +338,12 @@ body {
 
 }
   
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
 
-  @keyframes welcomeappear {
-    0% {
-        color: transparent;
-      }
-    100% {
-        color: #fff;
-    }
-}
 @media screen and (max-width: 960px) {
+    .temp {
+        font-size: 1rem;
+        padding-bottom: 20%;
+    }
     .actualcontent h1 {
         font-size: 3rem;
     }
