@@ -156,7 +156,7 @@ html {
         opacity: 0%;
     }
     .navbar__menu.active {
-        background: transparent;
+        background: #202020;
         top: 100%;
         opacity:1;
         transition: all 0.5s ease;
