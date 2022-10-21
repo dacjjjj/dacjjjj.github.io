@@ -340,9 +340,20 @@ body {
   
 
 @media screen and (max-width: 960px) {
+
+    .maincontent {
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+
+    .date__time {
+        font-size: 0.5rem;
+    }
+
     .temp {
         font-size: 1rem;
-        padding-bottom: 20%;
+        padding-bottom: 100%;
     }
     .actualcontent h1 {
         font-size: 3rem;
