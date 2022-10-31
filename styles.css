@@ -306,6 +306,13 @@ body {
       color: #c7c7c7;
   }
 
+   #replaceme {
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+ }
   /* .maincontent img {
       padding-top:10%;
       max-width: 100%;
