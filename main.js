@@ -48,7 +48,7 @@ function runFun() {
 }, 0);
     canvas.style.backgroundImage = "url('images/fish.webp')";
     canvas.style.backgroundPosition = "center center";
-    canvas.style.backgroundSize = "cover";
+    canvas.style.backgroundSize = "contain";
 
 }
 
