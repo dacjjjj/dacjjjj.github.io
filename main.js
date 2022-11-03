@@ -46,8 +46,9 @@ function runFun() {
     setTimeout(function() {
   canvas.style.height = window.innerHeight + "px";
 }, 0);
-    canvas.style.backgroundColor = "green";
-
+    canvas.style.backgroundImage = "url('images/fish.webp')";
+    canvas.style.backgroundPosition = "center center";
+    canvas.style.backgroundSize = "cover";
 
 }
 
