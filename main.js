@@ -25,8 +25,11 @@ const deviceType = () => {
     return "desktop";
 };
 
+console.log(deviceType())
 
 funactive.addEventListener("click", function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
     console.log("pass");
     var maincontentfind = document.querySelector('#replaceme');
     maincontentfind.style.opacity = 0;
@@ -41,6 +44,7 @@ funactive.addEventListener("click", function() {
 })
 
 function runFun() {
+    document.body.style.backgroundColor = "#2f5274";
     const canvas = document.querySelector('#easteregg')
     canvas.style.width = window.innerWidth + "px";
     setTimeout(function() {
@@ -80,7 +84,7 @@ function resizeCanvas() {
 }, 0);
 }
 
-window.onresize = runFun;
+// window.onresize = resizeCanvas;
 
 
 async function onLoadBubbles() {
@@ -105,6 +109,9 @@ function loadButtons() {
     var letext = document.createTextNode("Still under construction...");
     createText.appendChild(letext);
     createText.style.color = "#c7c7c7"
+    if ((deviceType()) == "mobile"){
+        return
+    }
     underconstruction.appendChild(createText);
 
     moreBubble()
