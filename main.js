@@ -10,7 +10,7 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 })
 
-
+var ac = 1
 const body = document.querySelector('.mainimagecontainer')
 
 
@@ -46,12 +46,31 @@ function runFun() {
     setTimeout(function() {
   canvas.style.height = window.innerHeight + "px";
 }, 0);
-    canvas.style.backgroundImage = "url('images/fish.webp')";
-    canvas.style.backgroundPosition = "center center";
-    canvas.style.backgroundSize = "contain";
-
+    // canvas.style.backgroundImage = "url('images/fish.webp')";
+    // canvas.style.backgroundPosition = "center center";
+    // canvas.style.backgroundSize = "contain";
+    onLoadBubbles()
 }
 
+function createBubble() {
+    const canvas = document.querySelector('#replaceme')
+    const createElement = document.createElement('div')
+    createElement.setAttribute("id", "bubble");
+    var size = Math.random() * 60;
+    createElement.style.width = size + 'px';
+    createElement.style.height = size + 'px';
+    createElement.style.opacity = '1';
+    createElement.style.left = Math.random() * innerWidth + "px";
+
+
+    canvas.appendChild(createElement)
+    
+    setTimeout(() => {
+        createElement.style.opacity = '0';
+        createElement.remove();
+    },4000
+    )
+}
 
 function resizeCanvas() {
     const canvas = document.querySelector('#easteregg')
@@ -64,3 +83,36 @@ function resizeCanvas() {
 window.onresize = runFun;
 
 
+async function onLoadBubbles() {
+    let fork = setInterval(createBubble,10);
+    await sleep(1000)
+    clearInterval(fork)
+    loadButtons()
+}
+
+function loadButtons() {
+    const canvas = document.querySelector('#replaceme')
+    const createButton = document.createElement('div')
+    createButton.setAttribute("id", "menuButton");
+    canvas.appendChild(createButton)
+    createButton.style.opacity = '0';
+    setTimeout(() => {
+        createButton.style.opacity = '1';
+    },2500
+    )
+    const underconstruction = document.querySelector('#menuButton')
+    const createText = document.createElement('h1')
+    var letext = document.createTextNode("Still under construction...");
+    createText.appendChild(letext);
+    createText.style.color = "#c7c7c7"
+    underconstruction.appendChild(createText);
+
+    moreBubble()
+}
+
+function moreBubble() {
+    setInterval(createBubble(2),20);
+
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));

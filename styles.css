@@ -241,6 +241,76 @@ html {
 
 }
 
+#easteregg {
+    background-color: #2f5274;
+    animation: deeperWater 4s linear;
+}
+
+div #bubble {
+    position: fixed;
+    bottom: 0px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255, 255, 0.5);
+    background-image: url(images/bubbles.png);
+    background-size: contain;
+    z-index: 16777271;
+    animation: bubbleMove 0.25s linear infinite;
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+}
+
+div #menuButton {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 30vh;
+    background-image: url(images/juan.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    opacity: 1;
+    z-index: 16777271;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+}
+
+@keyframes deeperWater {
+    from {
+        background-color: #3a759c;
+      }
+      10% {
+        background-color: #3a7196;
+      }
+      50% {
+        background-color: rgb(61, 97, 131);
+      }
+      75% {
+        background-color: #335f8b;
+      }
+      100% {
+        background-color: #2f5274;
+      }
+}
+@keyframes bubbleMove
+{
+    0%
+    {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    99%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-1200%);
+        opacity: 1; 
+    }
+}
 .easteregg {
     padding-top: 100%;
 }
