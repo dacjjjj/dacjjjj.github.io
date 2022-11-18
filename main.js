@@ -113,12 +113,17 @@ function loadButtons() {
         return
     }
     underconstruction.appendChild(createText);
-
     moreBubble()
 }
 
-function moreBubble() {
-    setInterval(createBubble(2),20);
+function swapStyleSheet(sheet) {
+    document.getElementById("pagestyle").setAttribute("href", sheet);  
+}
+
+async function moreBubble() {
+    await sleep(3900)
+    swapStyleSheet("fishMenu.css")
+    setInterval(createBubble,200);
 
 }
 
