@@ -91,6 +91,7 @@ async function onLoadBubbles() {
     let fork = setInterval(createBubble,10);
     await sleep(1000)
     clearInterval(fork)
+    
     loadButtons()
 }
 
@@ -104,6 +105,11 @@ function loadButtons() {
         createButton.style.opacity = '1';
     },2500
     )
+    const createLand = document.createElement('div')
+    createLand.setAttribute("width", "100vw")
+    createLand.setAttribute("height", "100vh")
+    createLand.setAttribute("background-image", "url(image/menuland.png")
+    canvas.appendChild(createLand)
     const underconstruction = document.querySelector('#menuButton')
     const createText = document.createElement('h1')
     var letext = document.createTextNode("Still under construction...");
@@ -122,8 +128,7 @@ function swapStyleSheet(sheet) {
 
 async function moreBubble() {
     await sleep(3900)
-    swapStyleSheet("fishMenu.css")
-    setInterval(createBubble,200);
+    setInterval(createBubble,500);
 
 }
 
