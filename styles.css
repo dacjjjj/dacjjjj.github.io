@@ -321,10 +321,10 @@ div #menuButton {
   overflow: hidden;
   width: 100%;
   background-color: rgba(74, 72, 68, 0.7);
-background-image: url("images/tulip.png"), url("images/mailoutline.png");
-  background-position: center center, top left;
-  background-repeat: no-repeat, repeat;
-  background-size: contain, 100% 100%;
+background-image: url("images/tulip.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   position: relative;
